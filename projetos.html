@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Projetos de Bryan Ferreira — Engenheiro de Software. Produtos SaaS, sistemas corporativos e mais." />
+  <meta name="author" content="Bryan Ferreira" />
+  <meta name="keywords" content="projetos, portfólio, engenheiro de software, SaaS, EisenCare, .NET, Next.js, Bryan Ferreira" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://bryanrory.github.io/projetos.html" />
+  <meta property="og:title" content="Projetos — Bryan Ferreira" />
+  <meta property="og:description" content="Projetos de Bryan Ferreira — Engenheiro de Software." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://bryanrory.github.io/projetos.html" />
+  <meta property="og:image" content="https://bryanrory.github.io/assets/foto.jpg" />
+  <title>Projetos — Bryan Ferreira</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ===================== NAVBAR ===================== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <!-- Logo leva de volta ao início -->
+      <a href="index.html" class="nav-logo">BF</a>
+      <ul class="nav-links">
+        <li><a href="index.html#sobre">Sobre</a></li>
+        <li><a href="index.html#experiencia">Experiência</a></li>
+        <li><a href="projetos.html" class="active">Projetos</a></li>
+        <li><a href="index.html#competencias">Skills</a></li>
+        <li><a href="index.html#contato">Contato</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="theme-toggle" aria-label="Alternar tema"></button>
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===================== PAGE HEADER ===================== -->
+  <header class="page-header">
+    <div class="container">
+      <p class="page-header-tag fade-in">// projetos</p>
+      <h1 class="fade-in">Meus <span class="highlight">Projetos</span></h1>
+      <p class="fade-in">Produtos e sistemas que desenvolvi ao longo da carreira.</p>
+    </div>
+  </header>
+
+  <!-- ===================== PROJETOS GRID ===================== -->
+  <main>
+    <section class="section" style="padding-top: 1rem;">
+      <div class="container">
+        <div class="projects-page-grid">
+
+          <!-- ══════════════════════════════════════════════
+               COMO ADICIONAR UM NOVO PROJETO:
+               1. Copie um bloco <article class="project-card"> abaixo
+               2. Substitua nome, descrição e tecnologias
+               3. Se tiver imagem: salve em assets/projetos/nome.png
+                  e atualize o src da <img>
+               4. Se for produto comercial: use apenas "Visitar site"
+               5. Se for open source: adicione botão "GitHub" com o link
+               ══════════════════════════════════════════════ -->
+
+          <!-- PROJETO 1 — EisenCare (produto comercial) -->
+          <article class="project-card reveal">
+            <div class="project-img-wrap">
+              <img
+                src="assets/projetos/eisencare.png"
+                alt="EisenCare — Plataforma SaaS para barbearias"
+                class="project-img"
+                onerror="this.style.display='none'"
+              />
+              <div class="project-img-placeholder"><span>EC</span></div>
+            </div>
+            <div class="project-body">
+              <h2 class="project-name">EisenCare</h2>
+              <p class="project-desc">
+                Plataforma SaaS para gestão de barbearias, focada em agendamento online,
+                organização operacional e redução de faltas. Sistema completo com painel
+                administrativo, controle de agenda e notificações automáticas.
+              </p>
+              <div class="stack-tags">
+                <span class="tag">.NET</span>
+                <span class="tag">PostgreSQL</span>
+                <span class="tag">Next.js</span>
+                <span class="tag">Node.js</span>
+              </div>
+              <div class="project-links">
+                <a href="https://eisencare.com" target="_blank" rel="noopener" class="btn btn-primary btn-sm">
+                  Visitar site
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15,3 21,3 21,9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJETO 2 — Template (descomente e preencha)
+          <article class="project-card reveal">
+            <div class="project-img-wrap">
+              <img src="assets/projetos/projeto2.png" alt="Nome do Projeto" class="project-img" onerror="this.style.display='none'" />
+              <div class="project-img-placeholder"><span>P2</span></div>
+            </div>
+            <div class="project-body">
+              <h2 class="project-name">Nome do Projeto</h2>
+              <p class="project-desc">
+                Descrição do projeto. Explique o que o sistema faz, qual problema resolve
+                e qual foi o seu papel no desenvolvimento.
+              </p>
+              <div class="stack-tags">
+                <span class="tag">Tecnologia 1</span>
+                <span class="tag">Tecnologia 2</span>
+              </div>
+              <div class="project-links">
+                <a href="https://link-do-projeto.com" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Ver projeto</a>
+                <a href="https://github.com/bryanrory/repo" target="_blank" rel="noopener" class="btn btn-outline btn-sm">GitHub</a>
+              </div>
+            </div>
+          </article>
+          -->
+
+        </div>
+
+        <!-- Voltar ao portfólio -->
+        <div style="text-align:center; padding: 1rem 0 3rem;">
+          <a href="index.html" class="btn btn-outline">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12,19 5,12 12,5"/></svg>
+            Voltar ao portfólio
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="container">
+      <p>© <span id="year"></span> Bryan Ferreira — Construído com HTML, CSS e JS puro.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

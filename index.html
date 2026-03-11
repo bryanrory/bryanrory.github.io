@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" data-theme="dark">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -11,6 +11,21 @@
   <link rel="stylesheet" href="style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <!-- SEO avançado -->
+  <meta name="keywords" content="engenheiro de software, desenvolvedor .NET, C#, Node.js, Next.js, ASP.NET Core, PostgreSQL, portfólio, Bryan Ferreira, desenvolvedor back-end, SaaS" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://bryanrory.github.io/" />
+  <!-- Open Graph completo -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://bryanrory.github.io/" />
+  <meta property="og:image" content="https://bryanrory.github.io/assets/foto.jpg" />
+  <meta property="og:locale" content="pt_BR" />
+  <meta property="og:site_name" content="Bryan Ferreira — Portfólio" />
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Bryan Ferreira — Engenheiro de Software" />
+  <meta name="twitter:description" content="Portfólio e currículo online de Bryan Ferreira, Engenheiro de Software especializado em .NET, Node.js e Next.js." />
+  <meta name="twitter:image" content="https://bryanrory.github.io/assets/foto.jpg" />
 </head>
 <body>
 
@@ -25,9 +40,12 @@
         <li><a href="#competencias">Skills</a></li>
         <li><a href="#contato">Contato</a></li>
       </ul>
-      <button class="hamburger" id="hamburger" aria-label="Menu">
-        <span></span><span></span><span></span>
-      </button>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="theme-toggle" aria-label="Alternar tema"></button>
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </div>
   </nav>
 
@@ -198,6 +216,8 @@
           </div>
         </article>
 
+        <!-- Para adicionar mais projetos aqui, copie o bloco article.project-card acima -->
+
         <!-- Exemplo de segundo projeto (comentado — descomente para usar) -->
         <!--
         <article class="project-card reveal">
@@ -218,6 +238,12 @@
         </article>
         -->
 
+      </div>
+      <div class="projects-more reveal">
+        <a href="projetos.html" class="btn btn-outline">
+          Ver todos os projetos
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12,5 19,12 12,19"/></svg>
+        </a>
       </div>
     </div>
   </section>

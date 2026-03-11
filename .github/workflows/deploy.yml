@@ -1,0 +1,57 @@
+# ============================================================
+# deploy.yml — Deploy automático para GitHub Pages
+#
+# Disparado a cada push na branch main.
+# Publica todos os arquivos estáticos diretamente.
+# ============================================================
+
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main   # Dispara apenas em push para main
+
+  # Permite rodar manualmente pelo painel Actions
+  workflow_dispatch:
+
+# Permissões necessárias para publicar no GitHub Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Garante que apenas um deploy rode por vez
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      # 1. Faz checkout do repositório
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # 2. Configura o GitHub Pages
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+
+      # 3. Empacota todos os arquivos do repositório como artefato
+      #    O path "." publica tudo que está na raiz do repositório.
+      #    Se quiser publicar uma subpasta (ex: /site), troque por path: './site'
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: '.'
+
+      # 4. Faz o deploy para o GitHub Pages
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
