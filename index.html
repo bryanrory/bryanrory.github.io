@@ -33,10 +33,10 @@
   <nav class="navbar" id="navbar">
     <div class="nav-inner">
       <ul class="nav-links" id="nav-drawer" role="navigation" aria-label="Menu principal">
-        <li><a href="#sobre">Sobre</a></li>
-        <li><a href="#experiencia">Experiência</a></li>
         <li><a href="#projetos">Projetos</a></li>
+        <li><a href="#experiencia">Experiência</a></li>
         <li><a href="#competencias">Skills</a></li>
+        <li><a href="#sobre">Sobre</a></li>
         <li><a href="#github">GitHub</a></li>
         <li><a href="#contato">Contato</a></li>
       </ul>
@@ -101,103 +101,71 @@
     </div>
   </section>
 
-  <!-- ===================== RESUMO PROFISSIONAL ===================== -->
-  <section class="section" id="sobre">
+  <!-- ===================== PROJETOS ===================== -->
+  <section class="section" id="projetos">
     <div class="container">
-      <h2 class="section-title reveal">Resumo Profissional</h2>
-      <div class="about-card reveal">
-        <p>
-          Engenheiro de Software com <strong>6+ anos de experiência</strong> no desenvolvimento e evolução
-          de <strong>sistemas empresariais em produção</strong>. Atuação direta na otimização de performance,
-          refatoração de arquitetura e aumento da confiabilidade de aplicações críticas utilizadas em
-          ambiente industrial e corporativo.
-        </p>
-        <p>
-          Especialista em <strong>.NET / C#</strong> com foco em backend, integrações via
-          <strong>APIs REST</strong> e modelagem com <strong>PostgreSQL</strong>. Fundador e responsável
-          técnico por <strong>plataforma SaaS</strong> construída do zero com .NET e Next.js — da
-          arquitetura ao deploy.
-        </p>
-        <p>
-          Perfil orientado a resultado: entrega sistemas que escalam, performa e resolve problemas
-          reais de negócio com <strong>código limpo</strong>, <strong>arquitetura sólida</strong> e
-          decisões técnicas pragmáticas.
-        </p>
+      <h2 class="section-title reveal">Projetos</h2>
+      <div class="projects-grid">
+
+        <!-- Para adicionar um novo projeto, copie o bloco abaixo e cole aqui -->
+        <article class="project-card reveal">
+          <div class="project-img-wrap">
+            <img src="assets/projetos/eisencare.png" alt="EisenCare" class="project-img" onerror="this.style.display='none'" />
+            <div class="project-img-placeholder">
+              <span>EC</span>
+            </div>
+          </div>
+          <div class="project-body">
+            <h3 class="project-name">EisenCare</h3>
+            <p class="project-desc">
+              Plataforma SaaS para gestão de barbearias, focada em agendamento online,
+              organização operacional e redução de faltas.
+            </p>
+            <div class="stack-tags">
+              <span class="tag">C#</span>
+              <span class="tag">ASP.NET Core</span>
+              <span class="tag">PostgreSQL</span>
+              <span class="tag">Next.js</span>
+              <span class="tag">Node.js</span>
+            </div>
+            <div class="project-links">
+              <a href="https://eisencare.com" target="_blank" rel="noopener" class="btn btn-primary btn-sm">
+                Visitar site
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15,3 21,3 21,9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!--
+        <article class="project-card reveal">
+          <div class="project-img-wrap">
+            <div class="project-img-placeholder"><span>P2</span></div>
+          </div>
+          <div class="project-body">
+            <h3 class="project-name">Nome do Projeto</h3>
+            <p class="project-desc">Descricao breve do projeto.</p>
+            <div class="stack-tags">
+              <span class="tag">Tecnologia</span>
+            </div>
+            <div class="project-links">
+              <a href="#" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Ver projeto</a>
+              <a href="#" target="_blank" rel="noopener" class="btn btn-outline btn-sm">GitHub</a>
+            </div>
+          </div>
+        </article>
+        -->
+
+      </div>
+      <div class="projects-more reveal">
+        <a href="projetos.html" class="btn btn-outline">
+          Ver todos os projetos
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12,5 19,12 12,19"/></svg>
+        </a>
       </div>
     </div>
   </section>
 
-  <!-- ===================== COMPETENCIAS ===================== -->
-  <section class="section section-alt" id="competencias">
-    <div class="container">
-      <h2 class="section-title reveal">Competências Técnicas</h2>
-      <div class="skills-grid">
-
-        <div class="skill-category reveal">
-          <h3 class="skill-cat-title">
-            <span class="skill-icon">&#x2B21;</span> Backend
-          </h3>
-          <div class="skill-list">
-            <span class="skill-pill">C#</span>
-            <span class="skill-pill">.NET / ASP.NET Core</span>
-            <span class="skill-pill">Delphi 5/7/10</span>
-            <span class="skill-pill">Node.js</span>
-          </div>
-        </div>
-
-        <div class="skill-category reveal">
-          <h3 class="skill-cat-title">
-            <span class="skill-icon">&#x2B21;</span> Frontend
-          </h3>
-          <div class="skill-list">
-            <span class="skill-pill">Next.js (React)</span>
-            <span class="skill-pill">HTML</span>
-            <span class="skill-pill">CSS</span>
-          </div>
-        </div>
-
-        <div class="skill-category reveal">
-          <h3 class="skill-cat-title">
-            <span class="skill-icon">&#x2B21;</span> Arquitetura &amp; Boas Práticas
-          </h3>
-          <div class="skill-list">
-            <span class="skill-pill">Arquitetura em camadas</span>
-            <span class="skill-pill">SOLID</span>
-            <span class="skill-pill">Clean Code</span>
-            <span class="skill-pill">APIs REST</span>
-            <span class="skill-pill">Modelagem de domínio</span>
-            <span class="skill-pill">Git</span>
-          </div>
-        </div>
-
-        <div class="skill-category reveal">
-          <h3 class="skill-cat-title">
-            <span class="skill-icon">&#x2B21;</span> Banco de Dados
-          </h3>
-          <div class="skill-list">
-            <span class="skill-pill">SQL Server</span>
-            <span class="skill-pill">PostgreSQL</span>
-            <span class="skill-pill">Oracle</span>
-            <span class="skill-pill">MySQL</span>
-            <span class="skill-pill">Tuning &amp; otimização</span>
-          </div>
-        </div>
-
-        <div class="skill-category reveal">
-          <h3 class="skill-cat-title">
-            <span class="skill-icon">&#x2B21;</span> DevOps &amp; Infraestrutura
-          </h3>
-          <div class="skill-list">
-            <span class="skill-pill">Linux Debian</span>
-            <span class="skill-pill">Windows Server</span>
-            <span class="skill-pill">Git</span>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-  
   <!-- ===================== EXPERIÊNCIA ===================== -->
   <section class="section section-alt" id="experiencia">
     <div class="container">
@@ -342,67 +310,99 @@
     </div>
   </section>
 
-  <!-- ===================== PROJETOS ===================== -->
-  <section class="section" id="projetos">
+  <!-- ===================== COMPETENCIAS ===================== -->
+  <section class="section" id="competencias">
     <div class="container">
-      <h2 class="section-title reveal">Projetos</h2>
-      <div class="projects-grid">
+      <h2 class="section-title reveal">Competências Técnicas</h2>
+      <div class="skills-grid">
 
-        <!-- Para adicionar um novo projeto, copie o bloco abaixo e cole aqui -->
-        <article class="project-card reveal">
-          <div class="project-img-wrap">
-            <img src="assets/projetos/eisencare.png" alt="EisenCare" class="project-img" onerror="this.style.display='none'" />
-            <div class="project-img-placeholder">
-              <span>EC</span>
-            </div>
+        <div class="skill-category reveal">
+          <h3 class="skill-cat-title">
+            <span class="skill-icon">&#x2B21;</span> Backend
+          </h3>
+          <div class="skill-list">
+            <span class="skill-pill">C#</span>
+            <span class="skill-pill">.NET / ASP.NET Core</span>
+            <span class="skill-pill">Delphi 5/7/10</span>
+            <span class="skill-pill">Node.js</span>
           </div>
-          <div class="project-body">
-            <h3 class="project-name">EisenCare</h3>
-            <p class="project-desc">
-              Plataforma SaaS para gestão de barbearias, focada em agendamento online,
-              organização operacional e redução de faltas.
-            </p>
-            <div class="stack-tags">
-              <span class="tag">C#</span>
-              <span class="tag">ASP.NET Core</span>
-              <span class="tag">PostgreSQL</span>
-              <span class="tag">Next.js</span>
-              <span class="tag">Node.js</span>
-            </div>
-            <div class="project-links">
-              <a href="https://eisencare.com" target="_blank" rel="noopener" class="btn btn-primary btn-sm">
-                Visitar site
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15,3 21,3 21,9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-              </a>
-            </div>
-          </div>
-        </article>
+        </div>
 
-        <!--
-        <article class="project-card reveal">
-          <div class="project-img-wrap">
-            <div class="project-img-placeholder"><span>P2</span></div>
+        <div class="skill-category reveal">
+          <h3 class="skill-cat-title">
+            <span class="skill-icon">&#x2B21;</span> Frontend
+          </h3>
+          <div class="skill-list">
+            <span class="skill-pill">Next.js (React)</span>
+            <span class="skill-pill">HTML</span>
+            <span class="skill-pill">CSS</span>
           </div>
-          <div class="project-body">
-            <h3 class="project-name">Nome do Projeto</h3>
-            <p class="project-desc">Descricao breve do projeto.</p>
-            <div class="stack-tags">
-              <span class="tag">Tecnologia</span>
-            </div>
-            <div class="project-links">
-              <a href="#" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Ver projeto</a>
-              <a href="#" target="_blank" rel="noopener" class="btn btn-outline btn-sm">GitHub</a>
-            </div>
+        </div>
+
+        <div class="skill-category reveal">
+          <h3 class="skill-cat-title">
+            <span class="skill-icon">&#x2B21;</span> Arquitetura &amp; Boas Práticas
+          </h3>
+          <div class="skill-list">
+            <span class="skill-pill">Arquitetura em camadas</span>
+            <span class="skill-pill">SOLID</span>
+            <span class="skill-pill">Clean Code</span>
+            <span class="skill-pill">APIs REST</span>
+            <span class="skill-pill">Modelagem de domínio</span>
+            <span class="skill-pill">Git</span>
           </div>
-        </article>
-        -->
+        </div>
+
+        <div class="skill-category reveal">
+          <h3 class="skill-cat-title">
+            <span class="skill-icon">&#x2B21;</span> Banco de Dados
+          </h3>
+          <div class="skill-list">
+            <span class="skill-pill">SQL Server</span>
+            <span class="skill-pill">PostgreSQL</span>
+            <span class="skill-pill">Oracle</span>
+            <span class="skill-pill">MySQL</span>
+            <span class="skill-pill">Tuning &amp; otimização</span>
+          </div>
+        </div>
+
+        <div class="skill-category reveal">
+          <h3 class="skill-cat-title">
+            <span class="skill-icon">&#x2B21;</span> DevOps &amp; Infraestrutura
+          </h3>
+          <div class="skill-list">
+            <span class="skill-pill">Linux Debian</span>
+            <span class="skill-pill">Windows Server</span>
+            <span class="skill-pill">Git</span>
+          </div>
+        </div>
 
       </div>
-      <div class="projects-more reveal">
-        <a href="projetos.html" class="btn btn-outline">
-          Ver todos os projetos
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12,5 19,12 12,19"/></svg>
-        </a>
+    </div>
+  </section>
+
+  <!-- ===================== RESUMO PROFISSIONAL ===================== -->
+  <section class="section section-alt" id="sobre">
+    <div class="container">
+      <h2 class="section-title reveal">Resumo Profissional</h2>
+      <div class="about-card reveal">
+        <p>
+          Engenheiro de Software com <strong>6+ anos de experiência</strong> no desenvolvimento e evolução
+          de <strong>sistemas empresariais em produção</strong>. Atuação direta na otimização de performance,
+          refatoração de arquitetura e aumento da confiabilidade de aplicações críticas utilizadas em
+          ambiente industrial e corporativo.
+        </p>
+        <p>
+          Especialista em <strong>.NET / C#</strong> com foco em backend, integrações via
+          <strong>APIs REST</strong> e modelagem com <strong>PostgreSQL</strong>. Fundador e responsável
+          técnico por <strong>plataforma SaaS</strong> construída do zero com .NET e Next.js — da
+          arquitetura ao deploy.
+        </p>
+        <p>
+          Perfil orientado a resultado: entrega sistemas que escalam, performa e resolve problemas
+          reais de negócio com <strong>código limpo</strong>, <strong>arquitetura sólida</strong> e
+          decisões técnicas pragmáticas.
+        </p>
       </div>
     </div>
   </section>
@@ -428,7 +428,7 @@
   </section>
 
   <!-- ===================== CONTATO ===================== -->
-  <section class="section" id="contato">
+  <section class="section section-alt" id="contato">
     <div class="container">
       <h2 class="section-title reveal">Contato</h2>
       <div class="contact-card reveal">
