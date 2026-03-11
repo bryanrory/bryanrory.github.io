@@ -283,6 +283,7 @@ img {
   border: none;
   cursor: pointer;
   padding: 4px;
+  z-index: 201;
 }
 
 .hamburger span {
@@ -297,6 +298,22 @@ img {
 .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
 .hamburger.open span:nth-child(2) { opacity: 0; }
 .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+/* Drawer overlay */
+.nav-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 199;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.nav-overlay.visible {
+  opacity: 1;
+  visibility: visible;
+}
 
 /* ============================================================
    HERO
@@ -829,31 +846,52 @@ img {
    RESPONSIVE
    ============================================================ */
 @media (max-width: 768px) {
-  /* Navbar mobile */
+  /* Drawer mobile */
   .nav-links {
-    display: none;
     position: fixed;
-    inset: 0;
-    background: rgba(15, 23, 42, 0.97);
-    backdrop-filter: blur(16px);
+    top: 0;
+    right: -280px;
+    width: 280px;
+    height: 100%;
+    background: var(--bg-alt);
+    border-left: 1px solid var(--border);
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 2.5rem;
-    z-index: 99;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 0;
+    padding: 5rem 2rem 2rem;
+    z-index: 200;
+    transition: right 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow-y: auto;
   }
 
   .nav-links.open {
-    display: flex;
+    right: 0;
+  }
+
+  .nav-links li {
+    width: 100%;
   }
 
   .nav-links a {
-    font-size: 1.2rem;
+    display: block;
+    padding: 0.85rem 0;
+    font-size: 1.05rem;
+    border-bottom: 1px solid var(--border);
+    width: 100%;
+  }
+
+  .nav-links a::after {
+    display: none;
+  }
+
+  .nav-links a:hover,
+  .nav-links a.active {
+    color: var(--accent);
   }
 
   .hamburger {
     display: flex;
-    z-index: 101;
   }
 
   /* Hero mobile */
@@ -959,10 +997,10 @@ body,
   box-shadow: 0 1px 0 var(--border);
 }
 
-/* Menu mobile no light mode */
+/* Drawer mobile no light mode */
 @media (max-width: 768px) {
   [data-theme="light"] .nav-links {
-    background: rgba(248, 250, 252, 0.98);
+    background: var(--bg-alt);
   }
 }
 

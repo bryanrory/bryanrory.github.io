@@ -40,24 +40,39 @@ function updateActiveLink() {
 
 window.addEventListener('scroll', updateActiveLink, { passive: true });
 
-/* ── 4. Menu hambúrguer (mobile) ── */
-const hamburger = document.getElementById('hamburger');
-const navMenu   = document.querySelector('.nav-links');
+/* ── 4. Menu drawer (mobile) ── */
+const hamburger  = document.getElementById('hamburger');
+const navMenu    = document.querySelector('.nav-links');
+const navOverlay = document.getElementById('nav-overlay');
+
+function openDrawer() {
+  hamburger.classList.add('open');
+  navMenu.classList.add('open');
+  navOverlay.classList.add('visible');
+  hamburger.setAttribute('aria-expanded', 'true');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeDrawer() {
+  hamburger.classList.remove('open');
+  navMenu.classList.remove('open');
+  navOverlay.classList.remove('visible');
+  hamburger.setAttribute('aria-expanded', 'false');
+  document.body.style.overflow = '';
+}
 
 hamburger.addEventListener('click', () => {
-  hamburger.classList.toggle('open');
-  navMenu.classList.toggle('open');
-  // Impede scroll do body quando o menu está aberto
-  document.body.style.overflow = navMenu.classList.contains('open') ? 'hidden' : '';
+  navMenu.classList.contains('open') ? closeDrawer() : openDrawer();
 });
 
-// Fecha o menu ao clicar num link
+navOverlay.addEventListener('click', closeDrawer);
+
 navLinks.forEach(link => {
-  link.addEventListener('click', () => {
-    hamburger.classList.remove('open');
-    navMenu.classList.remove('open');
-    document.body.style.overflow = '';
-  });
+  link.addEventListener('click', closeDrawer);
+});
+
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && navMenu.classList.contains('open')) closeDrawer();
 });
 
 /* ── 5. Scroll reveal (IntersectionObserver) ── */

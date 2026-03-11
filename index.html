@@ -32,7 +32,7 @@
   <!-- ===================== NAVBAR ===================== -->
   <nav class="navbar" id="navbar">
     <div class="nav-inner">
-      <ul class="nav-links">
+      <ul class="nav-links" id="nav-drawer" role="navigation" aria-label="Menu principal">
         <li><a href="#sobre">Sobre</a></li>
         <li><a href="#experiencia">Experiência</a></li>
         <li><a href="#projetos">Projetos</a></li>
@@ -42,12 +42,13 @@
       </ul>
       <div class="nav-actions">
         <button class="theme-toggle" id="theme-toggle" aria-label="Alternar tema"></button>
-        <button class="hamburger" id="hamburger" aria-label="Menu">
+        <button class="hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav-drawer">
           <span></span><span></span><span></span>
         </button>
       </div>
     </div>
   </nav>
+  <div class="nav-overlay" id="nav-overlay" aria-hidden="true"></div>
 
   <!-- ===================== HERO ===================== -->
   <section class="hero" id="hero">
