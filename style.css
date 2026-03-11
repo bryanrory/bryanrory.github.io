@@ -399,9 +399,18 @@ img {
   font-size: 0.88rem;
   color: var(--accent);
   font-weight: 500;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.25rem;
   font-family: monospace;
   letter-spacing: 0.02em;
+}
+
+.hero-subtag {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+  font-family: monospace;
+  letter-spacing: 0.04em;
 }
 
 .hero-name {
