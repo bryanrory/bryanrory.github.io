@@ -398,7 +398,31 @@ img {
   font-size: 1.05rem;
   color: var(--text-muted);
   max-width: 520px;
+  margin-bottom: 1.25rem;
+}
+
+/* Authority stats row */
+.hero-stats {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 0;
   margin-bottom: 2rem;
+}
+
+.hero-stat {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--accent);
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+
+.hero-stat:not(:last-child)::after {
+  content: "•";
+  margin: 0 0.75rem;
+  color: var(--border);
+  font-weight: 400;
 }
 
 .hero-btns {
@@ -841,6 +865,10 @@ img {
 
   .hero-desc {
     max-width: 100%;
+  }
+
+  .hero-stats {
+    justify-content: center;
   }
 
   .hero-btns {
