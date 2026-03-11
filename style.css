@@ -990,3 +990,81 @@ body,
   gap: 1.5rem;
   padding: 2rem 0 5rem;
 }
+
+/* ============================================================
+   GITHUB SECTION
+   ============================================================ */
+.github-repo-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0;
+}
+
+.github-repo-icon {
+  color: var(--text-muted);
+  flex-shrink: 0;
+}
+
+.github-repo-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.github-lang {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.github-lang-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+.github-stars {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.github-updated {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  flex-wrap: wrap;
+}
+
+.github-commit-msg {
+  font-style: italic;
+  opacity: 0.7;
+  font-size: 0.76rem;
+  max-width: 180px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.github-loading {
+  grid-column: 1 / -1;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  padding: 3rem 0;
+  opacity: 0.7;
+}
+
+.github-error {
+  grid-column: 1 / -1;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  padding: 3rem 0;
+}
