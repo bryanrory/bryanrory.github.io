@@ -53,8 +53,9 @@
   <section class="hero" id="hero">
     <div class="hero-content fade-in">
       <div class="hero-photo-wrap">
-        <!-- Para trocar a foto: substitua assets/foto.jpg pela sua imagem -->
-        <img src="assets/foto.jpg" alt="Foto de Bryan Rory Ferreira" class="hero-photo" onerror="this.style.display='none'" />
+        <!-- Foto de perfil: aceita foto.png ou foto.jpg (PNG tem prioridade) -->
+        <img src="assets/foto.png" alt="Foto de Bryan Rory Ferreira" class="hero-photo"
+             onerror="this.src='assets/foto.jpg';this.onerror=function(){this.style.display='none'}" />
         <div class="hero-photo-placeholder" id="photo-placeholder">BF</div>
       </div>
       <div class="hero-text">
