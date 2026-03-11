@@ -316,6 +316,11 @@ img {
 .hero-photo-wrap {
   position: relative;
   flex-shrink: 0;
+  /* Dimensões explícitas garantem que o wrapper sempre reserve espaço no
+     flex row, mesmo quando a <img> está display:none. Sem isso, o wrapper
+     colapsa para 0x0 e o placeholder (position:absolute) flutua sobre o texto. */
+  width: 160px;
+  height: 160px;
 }
 
 .hero-photo {
@@ -794,6 +799,11 @@ img {
 
   .hero-btns {
     justify-content: center;
+  }
+
+  .hero-photo-wrap {
+    width: 120px;
+    height: 120px;
   }
 
   .hero-photo,
