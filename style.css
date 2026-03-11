@@ -148,6 +148,25 @@ img {
   transform: translateY(-2px);
 }
 
+/* WhatsApp — verde harmonizado com o tema escuro/claro */
+.btn-whatsapp {
+  background: transparent;
+  color: #25d366;
+  border-color: #25d366;
+}
+
+.btn-whatsapp:hover {
+  background: #25d366;
+  color: #0f172a;
+  border-color: #25d366;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.25);
+}
+
+[data-theme="light"] .btn-whatsapp:hover {
+  color: #fff;
+}
+
 .btn-sm {
   padding: 0.45rem 1rem;
   font-size: 0.85rem;
