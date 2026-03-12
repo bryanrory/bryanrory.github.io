@@ -893,6 +893,35 @@ img {
 }
 
 /* ============================================================
+   FLOATING CONTACT BUTTON (WhatsApp)
+   ============================================================ */
+.fab-contact {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #25d366;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 16px rgba(37, 211, 102, 0.35);
+  z-index: 90;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.fab-contact:hover {
+  transform: translateY(-3px) scale(1.08);
+  box-shadow: 0 8px 24px rgba(37, 211, 102, 0.45);
+}
+
+.fab-contact:active {
+  transform: scale(0.95);
+}
+
+/* ============================================================
    RESPONSIVE
    ============================================================ */
 @media (max-width: 768px) {
