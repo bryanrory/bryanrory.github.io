@@ -49,16 +49,11 @@
   </header>
 
   <main>
+    <!-- ===================== TEXTO DO PROJETO ===================== -->
     <section class="section" style="padding-top: 1rem;">
       <div class="container">
-        <div class="project-detail reveal">
-          <div class="project-detail-img">
-            <div class="project-img-placeholder" style="height:240px; border-radius: var(--radius);">
-              <span>AC</span>
-            </div>
-          </div>
-
-          <div class="project-detail-body">
+        <div class="project-detail-grid reveal">
+          <div class="project-detail-left">
             <h2 class="project-detail-subtitle">Sobre o projeto</h2>
             <p class="project-detail-desc">
               Backend para agente de IA com arquitetura modular,
@@ -73,7 +68,9 @@
               <li>Base para agentes inteligentes</li>
               <li>Estrutura escalável</li>
             </ul>
+          </div>
 
+          <div class="project-detail-right">
             <h3 class="project-detail-subtitle">Stack</h3>
             <div class="stack-tags">
               <span class="tag">Node.js</span>
@@ -96,7 +93,33 @@
         </div>
       </div>
     </section>
+
+    <!-- ===================== GALERIA / CARROSSEL ===================== -->
+    <section class="section" style="padding-top: 0;">
+      <div class="container container-wide">
+        <div class="project-carousel reveal" id="project-carousel">
+          <div class="carousel-slides">
+            <div class="carousel-slide active" data-caption="Integração com APIs">
+              <img src="../assets/projetos/ai-agente-core/api.png" alt="Integração com APIs" />
+            </div>
+          </div>
+          <div class="carousel-footer">
+            <div class="carousel-dots" id="carousel-dots"></div>
+            <p class="carousel-caption" id="carousel-caption">Integração com APIs</p>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
+
+  <!-- ===================== LIGHTBOX ===================== -->
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="lightbox-close" id="lightbox-close" aria-label="Fechar">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="24" height="24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+    <img class="lightbox-img" id="lightbox-img" src="" alt="" />
+    <p class="lightbox-caption" id="lightbox-caption"></p>
+  </div>
 
   <!-- ===================== BOTÃO FLUTUANTE CONTATO ===================== -->
   <a href="https://wa.me/5547991633210" target="_blank" rel="noopener" class="fab-contact" aria-label="Falar no WhatsApp">
