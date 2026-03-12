@@ -298,3 +298,51 @@ if (githubSection) {
   );
   githubObserver.observe(githubSection);
 }
+
+/* ── 10. Project Carousel ── */
+const carousel = document.getElementById('project-carousel');
+
+if (carousel) {
+  const slides = carousel.querySelectorAll('.carousel-slide');
+  const caption = document.getElementById('carousel-caption');
+  const dotsWrap = document.getElementById('carousel-dots');
+  const prevBtn = carousel.querySelector('.carousel-prev');
+  const nextBtn = carousel.querySelector('.carousel-next');
+  let current = 0;
+
+  // Build dots
+  slides.forEach((_, i) => {
+    const dot = document.createElement('button');
+    dot.className = 'carousel-dot' + (i === 0 ? ' active' : '');
+    dot.setAttribute('aria-label', `Imagem ${i + 1}`);
+    dot.addEventListener('click', () => goTo(i));
+    dotsWrap.appendChild(dot);
+  });
+
+  function goTo(index) {
+    slides[current].classList.remove('active');
+    dotsWrap.children[current].classList.remove('active');
+    current = (index + slides.length) % slides.length;
+    slides[current].classList.add('active');
+    dotsWrap.children[current].classList.add('active');
+    caption.textContent = slides[current].dataset.caption;
+  }
+
+  prevBtn.addEventListener('click', () => goTo(current - 1));
+  nextBtn.addEventListener('click', () => goTo(current + 1));
+
+  // Swipe support
+  let startX = 0;
+  const slidesWrap = carousel.querySelector('.carousel-slides');
+
+  slidesWrap.addEventListener('touchstart', (e) => {
+    startX = e.touches[0].clientX;
+  }, { passive: true });
+
+  slidesWrap.addEventListener('touchend', (e) => {
+    const diff = startX - e.changedTouches[0].clientX;
+    if (Math.abs(diff) > 40) {
+      goTo(diff > 0 ? current + 1 : current - 1);
+    }
+  });
+}

@@ -53,11 +53,29 @@
     <section class="section" style="padding-top: 1rem;">
       <div class="container">
         <div class="project-detail reveal">
-          <div class="project-detail-img">
-            <img src="../assets/projetos/eisencare.png" alt="EisenCare" onerror="this.style.display='none'" />
-            <div class="project-img-placeholder" style="height:240px; border-radius: var(--radius);">
-              <span>EC</span>
+          <div class="project-detail-img project-carousel" id="project-carousel">
+            <div class="carousel-slides">
+              <div class="carousel-slide active" data-caption="Dashboard admin">
+                <img src="../assets/projetos/eisencare/dashboard-admin.png" alt="Dashboard admin" />
+              </div>
+              <div class="carousel-slide" data-caption="Página pública da barbearia">
+                <img src="../assets/projetos/eisencare/pagina-publica.png" alt="Página pública da barbearia" />
+              </div>
+              <div class="carousel-slide" data-caption="Painel do profissional">
+                <img src="../assets/projetos/eisencare/painel-profissional.png" alt="Painel do profissional" />
+              </div>
+              <div class="carousel-slide" data-caption="Área do cliente">
+                <img src="../assets/projetos/eisencare/area-cliente.png" alt="Área do cliente" />
+              </div>
             </div>
+            <button class="carousel-btn carousel-prev" aria-label="Imagem anterior">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polyline points="15,18 9,12 15,6"/></svg>
+            </button>
+            <button class="carousel-btn carousel-next" aria-label="Próxima imagem">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polyline points="9,6 15,12 9,18"/></svg>
+            </button>
+            <div class="carousel-dots" id="carousel-dots"></div>
+            <p class="carousel-caption" id="carousel-caption">Dashboard admin</p>
           </div>
 
           <div class="project-detail-body">
@@ -97,41 +115,6 @@
           </div>
         </div>
 
-        <!-- ===================== GALERIA ===================== -->
-        <div class="project-gallery reveal">
-          <h3 class="project-gallery-title">Screenshots</h3>
-          <div class="project-gallery-track">
-
-            <div class="project-gallery-item">
-              <div class="project-gallery-img-wrap">
-                <img src="../assets/projetos/eisencare/pagina-publica.png" alt="Página pública da barbearia" />
-              </div>
-              <p class="project-gallery-caption">Página pública da barbearia</p>
-            </div>
-
-            <div class="project-gallery-item">
-              <div class="project-gallery-img-wrap">
-                <img src="../assets/projetos/eisencare/dashboard-admin.png" alt="Dashboard admin" />
-              </div>
-              <p class="project-gallery-caption">Dashboard admin</p>
-            </div>
-
-            <div class="project-gallery-item">
-              <div class="project-gallery-img-wrap">
-                <img src="../assets/projetos/eisencare/painel-profissional.png" alt="Painel do profissional" />
-              </div>
-              <p class="project-gallery-caption">Painel do profissional</p>
-            </div>
-
-            <div class="project-gallery-item">
-              <div class="project-gallery-img-wrap">
-                <img src="../assets/projetos/eisencare/area-cliente.png" alt="Área do cliente" />
-              </div>
-              <p class="project-gallery-caption">Área do cliente</p>
-            </div>
-
-          </div>
-        </div>
 
       </div>
     </section>
