@@ -1142,11 +1142,25 @@ body,
 /* ============================================================
    PROJECT DETAIL PAGE (vertical layout)
    ============================================================ */
-.project-detail-vertical {
-  max-width: 700px;
+.project-detail-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 2.5rem;
+  align-items: start;
+}
+
+.project-detail-left,
+.project-detail-right {
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
+}
+
+@media (max-width: 768px) {
+  .project-detail-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
 }
 
 .project-detail-subtitle {
