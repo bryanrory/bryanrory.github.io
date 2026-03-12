@@ -1237,6 +1237,82 @@ body,
 }
 
 /* ============================================================
+   PROJECT GALLERY (horizontal scroll)
+   ============================================================ */
+.project-gallery {
+  margin-top: 3rem;
+}
+
+.project-gallery-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 1.25rem;
+}
+
+.project-gallery-track {
+  display: flex;
+  gap: 1.25rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  padding-bottom: 0.75rem;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Hide scrollbar */
+.project-gallery-track::-webkit-scrollbar {
+  height: 0;
+}
+
+.project-gallery-track {
+  scrollbar-width: none;
+}
+
+.project-gallery-item {
+  flex: 0 0 320px;
+  scroll-snap-align: start;
+}
+
+.project-gallery-img-wrap {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: border-color var(--transition), box-shadow var(--transition);
+}
+
+.project-gallery-img-wrap:hover {
+  border-color: var(--accent);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+}
+
+.project-gallery-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+.project-gallery-caption {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  text-align: center;
+  margin-top: 0.6rem;
+}
+
+@media (max-width: 768px) {
+  .project-gallery-item {
+    flex: 0 0 280px;
+  }
+
+  .project-gallery-item img {
+    height: 170px;
+  }
+}
+
+/* ============================================================
    GITHUB SECTION
    ============================================================ */
 .github-repo-header {
