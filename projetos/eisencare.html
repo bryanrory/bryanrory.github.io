@@ -50,75 +50,88 @@
   </header>
 
   <main>
+    <!-- ===================== TEXTO DO PROJETO ===================== -->
     <section class="section" style="padding-top: 1rem;">
       <div class="container">
-        <div class="project-detail reveal">
-          <div class="project-detail-img project-carousel" id="project-carousel">
-            <div class="carousel-slides">
-              <div class="carousel-slide active" data-caption="Dashboard admin">
-                <img src="../assets/projetos/eisencare/dashboard-admin.png" alt="Dashboard admin" />
-              </div>
-              <div class="carousel-slide" data-caption="Página pública da barbearia">
-                <img src="../assets/projetos/eisencare/pagina-publica.png" alt="Página pública da barbearia" />
-              </div>
-              <div class="carousel-slide" data-caption="Painel do profissional">
-                <img src="../assets/projetos/eisencare/painel-profissional.png" alt="Painel do profissional" />
-              </div>
-              <div class="carousel-slide" data-caption="Área do cliente">
-                <img src="../assets/projetos/eisencare/area-cliente.png" alt="Área do cliente" />
-              </div>
+        <div class="project-detail-vertical reveal">
+          <h2 class="project-detail-subtitle">Sobre o projeto</h2>
+          <p class="project-detail-desc">
+            Sistema SaaS completo para gestão de barbearias, com foco em agendamento online,
+            organização operacional, controle de agenda e notificações automáticas.
+          </p>
+
+          <h3 class="project-detail-subtitle">Recursos</h3>
+          <ul class="project-detail-features">
+            <li>Agendamento online</li>
+            <li>Painel administrativo</li>
+            <li>Controle de profissionais</li>
+            <li>Notificações automáticas</li>
+            <li>Sistema multiusuário</li>
+          </ul>
+
+          <h3 class="project-detail-subtitle">Stack</h3>
+          <div class="stack-tags">
+            <span class="tag">.NET</span>
+            <span class="tag">PostgreSQL</span>
+            <span class="tag">Next.js</span>
+            <span class="tag">Node.js</span>
+          </div>
+
+          <div class="project-detail-actions">
+            <a href="https://eisencare.com/" target="_blank" rel="noopener" class="btn btn-primary">
+              Visitar site
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15,3 21,3 21,9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            </a>
+            <a href="../index.html#projetos" class="btn btn-secondary">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12,19 5,12 12,5"/></svg>
+              Voltar
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== GALERIA / CARROSSEL ===================== -->
+    <section class="section" style="padding-top: 0;">
+      <div class="container container-wide">
+        <div class="project-carousel reveal" id="project-carousel">
+          <div class="carousel-slides">
+            <div class="carousel-slide active" data-caption="Dashboard admin">
+              <img src="../assets/projetos/eisencare/dashboard-admin.png" alt="Dashboard admin" />
             </div>
-            <button class="carousel-btn carousel-prev" aria-label="Imagem anterior">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polyline points="15,18 9,12 15,6"/></svg>
-            </button>
-            <button class="carousel-btn carousel-next" aria-label="Próxima imagem">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polyline points="9,6 15,12 9,18"/></svg>
-            </button>
+            <div class="carousel-slide" data-caption="Página pública da barbearia">
+              <img src="../assets/projetos/eisencare/pagina-publica.png" alt="Página pública da barbearia" />
+            </div>
+            <div class="carousel-slide" data-caption="Painel do profissional">
+              <img src="../assets/projetos/eisencare/painel-profissional.png" alt="Painel do profissional" />
+            </div>
+            <div class="carousel-slide" data-caption="Área do cliente">
+              <img src="../assets/projetos/eisencare/area-cliente.png" alt="Área do cliente" />
+            </div>
+          </div>
+          <button class="carousel-btn carousel-prev" aria-label="Imagem anterior">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><polyline points="15,18 9,12 15,6"/></svg>
+          </button>
+          <button class="carousel-btn carousel-next" aria-label="Próxima imagem">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><polyline points="9,6 15,12 9,18"/></svg>
+          </button>
+          <div class="carousel-footer">
             <div class="carousel-dots" id="carousel-dots"></div>
             <p class="carousel-caption" id="carousel-caption">Dashboard admin</p>
           </div>
-
-          <div class="project-detail-body">
-            <h2 class="project-detail-subtitle">Sobre o projeto</h2>
-            <p class="project-detail-desc">
-              Sistema SaaS completo para gestão de barbearias, com foco em agendamento online,
-              organização operacional, controle de agenda e notificações automáticas.
-            </p>
-
-            <h3 class="project-detail-subtitle">Recursos</h3>
-            <ul class="project-detail-features">
-              <li>Agendamento online</li>
-              <li>Painel administrativo</li>
-              <li>Controle de profissionais</li>
-              <li>Notificações automáticas</li>
-              <li>Sistema multiusuário</li>
-            </ul>
-
-            <h3 class="project-detail-subtitle">Stack</h3>
-            <div class="stack-tags">
-              <span class="tag">.NET</span>
-              <span class="tag">PostgreSQL</span>
-              <span class="tag">Next.js</span>
-              <span class="tag">Node.js</span>
-            </div>
-
-            <div class="project-detail-actions">
-              <a href="https://eisencare.com/" target="_blank" rel="noopener" class="btn btn-primary">
-                Visitar site
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15,3 21,3 21,9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-              </a>
-              <a href="../index.html#projetos" class="btn btn-secondary">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12,19 5,12 12,5"/></svg>
-                Voltar
-              </a>
-            </div>
-          </div>
         </div>
-
-
       </div>
     </section>
   </main>
+
+  <!-- ===================== LIGHTBOX ===================== -->
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="lightbox-close" id="lightbox-close" aria-label="Fechar">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="24" height="24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+    <img class="lightbox-img" id="lightbox-img" src="" alt="" />
+    <p class="lightbox-caption" id="lightbox-caption"></p>
+  </div>
 
   <!-- ===================== FOOTER ===================== -->
   <footer class="footer">

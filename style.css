@@ -1140,29 +1140,10 @@ body,
 }
 
 /* ============================================================
-   PROJECT DETAIL PAGE
+   PROJECT DETAIL PAGE (vertical layout)
    ============================================================ */
-.project-detail {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2.5rem;
-  align-items: start;
-}
-
-.project-detail-img {
-  position: relative;
-  border-radius: var(--radius);
-  overflow: hidden;
-  background: var(--bg-alt);
-}
-
-.project-detail-img img {
-  width: 100%;
-  display: block;
-  border-radius: var(--radius);
-}
-
-.project-detail-body {
+.project-detail-vertical {
+  max-width: 700px;
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
@@ -1208,6 +1189,13 @@ body,
   margin-top: 1rem;
 }
 
+/* Wider container for carousel */
+.container-wide {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
 /* Clickable project card overlay */
 .project-card-link {
   position: absolute;
@@ -1230,12 +1218,6 @@ body,
   z-index: 3;
 }
 
-@media (max-width: 768px) {
-  .project-detail {
-    grid-template-columns: 1fr;
-  }
-}
-
 /* ============================================================
    PROJECT CAROUSEL (image slider in detail page)
    ============================================================ */
@@ -1249,6 +1231,8 @@ body,
   overflow: hidden;
   border-radius: var(--radius);
   background: var(--bg-alt);
+  border: 1px solid var(--border);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
 }
 
 .carousel-slide {
@@ -1262,16 +1246,21 @@ body,
 .carousel-slide img {
   width: 100%;
   display: block;
-  border-radius: var(--radius);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.carousel-slide img:hover {
+  transform: scale(1.015);
 }
 
 .carousel-btn {
   position: absolute;
-  top: calc(50% - 18px);
-  width: 36px;
-  height: 36px;
+  top: calc(50% - 22px);
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
-  background: rgba(15, 23, 42, 0.7);
+  background: rgba(15, 23, 42, 0.75);
   border: 1px solid var(--border);
   color: var(--text);
   cursor: pointer;
@@ -1286,21 +1275,25 @@ body,
   background: var(--accent);
   color: #0f172a;
   border-color: var(--accent);
+  transform: scale(1.1);
 }
 
 .carousel-prev {
-  left: 0.5rem;
+  left: 0.75rem;
 }
 
 .carousel-next {
-  right: 0.5rem;
+  right: 0.75rem;
+}
+
+.carousel-footer {
+  margin-top: 1rem;
 }
 
 .carousel-dots {
   display: flex;
   justify-content: center;
   gap: 0.5rem;
-  margin-top: 0.75rem;
 }
 
 .carousel-dot {
@@ -1316,18 +1309,85 @@ body,
 
 .carousel-dot.active {
   background: var(--accent);
-  transform: scale(1.25);
+  transform: scale(1.3);
 }
 
 .carousel-caption {
-  font-size: 0.82rem;
+  font-size: 0.85rem;
   color: var(--text-muted);
   text-align: center;
-  margin-top: 0.4rem;
+  margin-top: 0.5rem;
 }
 
 [data-theme="light"] .carousel-btn {
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.85);
+}
+
+/* ============================================================
+   LIGHTBOX (fullscreen image viewer)
+   ============================================================ */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.92);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.lightbox.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.lightbox-img {
+  max-width: 92vw;
+  max-height: 82vh;
+  object-fit: contain;
+  border-radius: var(--radius);
+  box-shadow: 0 16px 64px rgba(0, 0, 0, 0.5);
+  transform: scale(0.92);
+  transition: transform 0.3s ease;
+}
+
+.lightbox.open .lightbox-img {
+  transform: scale(1);
+}
+
+.lightbox-caption {
+  color: #e2e8f0;
+  font-size: 0.9rem;
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.25rem;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #e2e8f0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition);
+  z-index: 1001;
+}
+
+.lightbox-close:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.1);
 }
 
 /* ============================================================

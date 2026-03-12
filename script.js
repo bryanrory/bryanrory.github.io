@@ -299,7 +299,7 @@ if (githubSection) {
   githubObserver.observe(githubSection);
 }
 
-/* ── 10. Project Carousel ── */
+/* ── 10. Project Carousel + Lightbox ── */
 const carousel = document.getElementById('project-carousel');
 
 if (carousel) {
@@ -345,4 +345,41 @@ if (carousel) {
       goTo(diff > 0 ? current + 1 : current - 1);
     }
   });
+
+  // Lightbox
+  const lightbox = document.getElementById('lightbox');
+  const lbImg = document.getElementById('lightbox-img');
+  const lbCaption = document.getElementById('lightbox-caption');
+  const lbClose = document.getElementById('lightbox-close');
+
+  if (lightbox) {
+    // Click image to open
+    slides.forEach(slide => {
+      const img = slide.querySelector('img');
+      img.addEventListener('click', () => {
+        lbImg.src = img.src;
+        lbImg.alt = img.alt;
+        lbCaption.textContent = slide.dataset.caption;
+        lightbox.classList.add('open');
+        lightbox.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+      });
+    });
+
+    function closeLightbox() {
+      lightbox.classList.remove('open');
+      lightbox.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+    }
+
+    lbClose.addEventListener('click', closeLightbox);
+
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox) closeLightbox();
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && lightbox.classList.contains('open')) closeLightbox();
+    });
+  }
 }
