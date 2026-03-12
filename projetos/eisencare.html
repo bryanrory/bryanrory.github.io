@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="EisenCare — Plataforma SaaS para gestão de barbearias com agendamento online, painel administrativo e notificações automáticas." />
+  <meta name="author" content="Bryan Rory Ferreira" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://bryanrory.github.io/projetos/eisencare.html" />
+  <meta property="og:title" content="EisenCare — Bryan Rory Ferreira" />
+  <meta property="og:description" content="Plataforma SaaS para gestão de barbearias com agendamento online e controle operacional." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://bryanrory.github.io/projetos/eisencare.html" />
+  <meta property="og:image" content="https://bryanrory.github.io/assets/projetos/eisencare.png" />
+  <title>EisenCare — Bryan Rory Ferreira</title>
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ===================== NAVBAR ===================== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <ul class="nav-links" id="nav-drawer" role="navigation" aria-label="Menu principal">
+        <li><a href="../index.html#projetos">Projetos</a></li>
+        <li><a href="../index.html#experiencia">Experiência</a></li>
+        <li><a href="../index.html#competencias">Skills</a></li>
+        <li><a href="../index.html#sobre">Sobre</a></li>
+        <li><a href="../index.html#github">GitHub</a></li>
+        <li><a href="../index.html#contato">Contato</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="theme-toggle" aria-label="Alternar tema"></button>
+        <button class="hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav-drawer">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+  <div class="nav-overlay" id="nav-overlay" aria-hidden="true"></div>
+
+  <!-- ===================== PROJECT DETAIL ===================== -->
+  <header class="page-header">
+    <div class="container">
+      <p class="page-header-tag fade-in">// projeto</p>
+      <h1 class="fade-in">Eisen<span class="highlight">Care</span></h1>
+      <p class="fade-in">Plataforma SaaS para gestão de barbearias</p>
+    </div>
+  </header>
+
+  <main>
+    <section class="section" style="padding-top: 1rem;">
+      <div class="container">
+        <div class="project-detail reveal">
+          <div class="project-detail-img">
+            <img src="../assets/projetos/eisencare.png" alt="EisenCare" onerror="this.style.display='none'" />
+            <div class="project-img-placeholder" style="height:240px; border-radius: var(--radius);">
+              <span>EC</span>
+            </div>
+          </div>
+
+          <div class="project-detail-body">
+            <h2 class="project-detail-subtitle">Sobre o projeto</h2>
+            <p class="project-detail-desc">
+              Sistema SaaS completo para gestão de barbearias, com foco em agendamento online,
+              organização operacional, controle de agenda e notificações automáticas.
+            </p>
+
+            <h3 class="project-detail-subtitle">Recursos</h3>
+            <ul class="project-detail-features">
+              <li>Agendamento online</li>
+              <li>Painel administrativo</li>
+              <li>Controle de profissionais</li>
+              <li>Notificações automáticas</li>
+              <li>Sistema multiusuário</li>
+            </ul>
+
+            <h3 class="project-detail-subtitle">Stack</h3>
+            <div class="stack-tags">
+              <span class="tag">.NET</span>
+              <span class="tag">PostgreSQL</span>
+              <span class="tag">Next.js</span>
+              <span class="tag">Node.js</span>
+            </div>
+
+            <div class="project-detail-actions">
+              <a href="https://eisencare.com/" target="_blank" rel="noopener" class="btn btn-primary">
+                Visitar site
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15,3 21,3 21,9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              </a>
+              <a href="../index.html#projetos" class="btn btn-secondary">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12,19 5,12 12,5"/></svg>
+                Voltar
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; <span id="year"></span> Bryan Rory Ferreira &#8212; Construído com HTML, CSS e JS puro.</p>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>

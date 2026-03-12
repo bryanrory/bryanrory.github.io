@@ -1140,6 +1140,103 @@ body,
 }
 
 /* ============================================================
+   PROJECT DETAIL PAGE
+   ============================================================ */
+.project-detail {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+  align-items: start;
+}
+
+.project-detail-img {
+  position: relative;
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--bg-alt);
+}
+
+.project-detail-img img {
+  width: 100%;
+  display: block;
+  border-radius: var(--radius);
+}
+
+.project-detail-body {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.project-detail-subtitle {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.project-detail-desc {
+  color: var(--text-muted);
+  line-height: 1.7;
+  font-size: 0.95rem;
+}
+
+.project-detail-features {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.project-detail-features li {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  padding-left: 1rem;
+  position: relative;
+}
+
+.project-detail-features li::before {
+  content: '›';
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+}
+
+.project-detail-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+/* Clickable project card overlay */
+.project-card-link {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+}
+
+.project-card-link:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: -2px;
+  border-radius: var(--radius);
+}
+
+.project-card {
+  position: relative;
+}
+
+.project-card .project-links {
+  position: relative;
+  z-index: 3;
+}
+
+@media (max-width: 768px) {
+  .project-detail {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ============================================================
    GITHUB SECTION
    ============================================================ */
 .github-repo-header {
