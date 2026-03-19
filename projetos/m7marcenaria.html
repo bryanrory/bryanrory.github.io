@@ -11,6 +11,7 @@
   <meta property="og:description" content="Site institucional para marcenaria com apresentação de serviços e portfólio." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://bryanrory.github.io/projetos/m7marcenaria.html" />
+  <meta property="og:image" content="https://bryanrory.github.io/assets/projetos/m7marcenaria.png" />
   <title>M7 Marcenaria — Bryan Rory Ferreira</title>
   <link rel="stylesheet" href="../style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -94,7 +95,33 @@
         </div>
       </div>
     </section>
+
+    <!-- ===================== GALERIA / CARROSSEL ===================== -->
+    <section class="section" style="padding-top: 0;">
+      <div class="container container-wide">
+        <div class="project-carousel reveal" id="project-carousel">
+          <div class="carousel-slides">
+            <div class="carousel-slide active" data-caption="M7 Marcenaria — Site institucional">
+              <img src="../assets/projetos/m7marcenaria.png" alt="M7 Marcenaria — Site institucional" />
+            </div>
+          </div>
+          <div class="carousel-footer">
+            <div class="carousel-dots" id="carousel-dots"></div>
+            <p class="carousel-caption" id="carousel-caption">M7 Marcenaria — Site institucional</p>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
+
+  <!-- ===================== LIGHTBOX ===================== -->
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="lightbox-close" id="lightbox-close" aria-label="Fechar">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="24" height="24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+    <img class="lightbox-img" id="lightbox-img" src="" alt="" />
+    <p class="lightbox-caption" id="lightbox-caption"></p>
+  </div>
 
   <!-- ===================== BOTÃO FLUTUANTE CONTATO ===================== -->
   <a href="https://wa.me/5547991633210" target="_blank" rel="noopener" class="fab-contact" aria-label="Falar no WhatsApp">
