@@ -3,16 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="EisenCare — Plataforma SaaS para gestão de barbearias com agendamento online, painel administrativo e notificações automáticas." />
+  <meta name="description" content="EisenCare, plataforma SaaS para gestão de barbearias com agendamento online, painel administrativo e notificações automáticas." />
   <meta name="author" content="Bryan Rory Ferreira" />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://bryanrory.github.io/projetos/eisencare.html" />
-  <meta property="og:title" content="EisenCare — Bryan Rory Ferreira" />
+  <meta property="og:title" content="EisenCare | Bryan Rory Ferreira" />
   <meta property="og:description" content="Plataforma SaaS para gestão de barbearias com agendamento online e controle operacional." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://bryanrory.github.io/projetos/eisencare.html" />
   <meta property="og:image" content="https://bryanrory.github.io/assets/projetos/eisencare.png" />
-  <title>EisenCare — Bryan Rory Ferreira</title>
+  <title>EisenCare | Bryan Rory Ferreira</title>
   <link rel="stylesheet" href="../style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
@@ -58,27 +58,45 @@
           <div class="project-detail-left">
             <h2 class="project-detail-subtitle">Sobre o projeto</h2>
             <p class="project-detail-desc">
-              Sistema SaaS completo para gestão de barbearias, com foco em agendamento online,
-              organização operacional, controle de agenda e notificações automáticas.
+              EisenCare é uma plataforma SaaS multi-tenant para gestão completa de barbearias, construída
+              do zero, desde o design da arquitetura até a infraestrutura em produção. Cada barbearia opera em
+              seu próprio espaço isolado com URL personalizada por slug, painel administrativo dedicado
+              e página pública de agendamento.
+            </p>
+            <p class="project-detail-desc">
+              O sistema foi projetado para resolver os problemas mais comuns do setor: agenda desorganizada,
+              faltas sem aviso, controle financeiro manual e ausência de visibilidade sobre o desempenho
+              dos profissionais. Hoje roda em produção com clientes reais e continua evoluindo.
             </p>
 
-            <h3 class="project-detail-subtitle">Recursos</h3>
+            <h3 class="project-detail-subtitle">Funcionalidades</h3>
             <ul class="project-detail-features">
-              <li>Agendamento online</li>
-              <li>Painel administrativo</li>
-              <li>Controle de profissionais</li>
-              <li>Notificações automáticas</li>
-              <li>Sistema multiusuário</li>
+              <li>Agendamento online com wizard de 5 etapas e detecção automática de conflitos</li>
+              <li>Painel administrativo completo com controle de agenda, profissionais e clientes</li>
+              <li>Página pública personalizada por barbearia com slug de URL único</li>
+              <li>Sistema de POS com cálculo automático de comissões por profissional</li>
+              <li>Controle de estoque com rastreamento de consumo por atendimento</li>
+              <li>Dashboard analítico com KPIs de faturamento, agendamentos e desempenho</li>
+              <li>Ranking de performance por profissional</li>
+              <li>Planos de assinatura VIP para clientes frequentes</li>
+              <li>Autenticação com controle de papéis: Admin, Profissional e Cliente</li>
+              <li>Exportação de dados em CSV para relatórios externos</li>
             </ul>
           </div>
 
           <div class="project-detail-right">
             <h3 class="project-detail-subtitle">Stack</h3>
             <div class="stack-tags">
-              <span class="tag">.NET</span>
+              <span class="tag">.NET 8</span>
+              <span class="tag">ASP.NET Core</span>
+              <span class="tag">Entity Framework Core</span>
               <span class="tag">PostgreSQL</span>
-              <span class="tag">Next.js</span>
-              <span class="tag">Node.js</span>
+              <span class="tag">Next.js (React)</span>
+              <span class="tag">Tailwind CSS</span>
+              <span class="tag">Clean Architecture</span>
+              <span class="tag">JWT</span>
+              <span class="tag">Docker</span>
+              <span class="tag">CI/CD</span>
             </div>
 
             <div class="project-detail-actions">
@@ -146,7 +164,7 @@
   <!-- ===================== FOOTER ===================== -->
   <footer class="footer">
     <div class="container">
-      <p>&copy; <span id="year"></span> Bryan Rory Ferreira &#8212; Construído com HTML, CSS e JS puro.</p>
+      <p>&copy; <span id="year"></span> Bryan Rory Ferreira · Construído com HTML, CSS e JS puro.</p>
     </div>
   </footer>
 

@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="ai-agente-core — Backend para agente de IA com arquitetura modular, integração com APIs e automações." />
+  <meta name="description" content="ai-agente-core: núcleo reutilizável de agente de IA com arquitetura tool-based, Claude API, BullMQ e integração WhatsApp." />
   <meta name="author" content="Bryan Rory Ferreira" />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://bryanrory.github.io/projetos/ai-agente-core.html" />
-  <meta property="og:title" content="ai-agente-core — Bryan Rory Ferreira" />
-  <meta property="og:description" content="Backend para agente de IA com arquitetura modular e integração com APIs." />
+  <meta property="og:title" content="ai-agente-core | Bryan Rory Ferreira" />
+  <meta property="og:description" content="Núcleo reutilizável de agente de IA com arquitetura tool-based e integração com Claude API." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://bryanrory.github.io/projetos/ai-agente-core.html" />
-  <title>ai-agente-core — Bryan Rory Ferreira</title>
+  <title>ai-agente-core | Bryan Rory Ferreira</title>
   <link rel="stylesheet" href="../style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
@@ -57,17 +57,25 @@
           <div class="project-detail-left">
             <h2 class="project-detail-subtitle">Sobre o projeto</h2>
             <p class="project-detail-desc">
-              Backend para agente de IA com arquitetura modular,
-              integração com APIs externas, automações e processamento de mensagens.
+              O ai-agente-core é o núcleo reutilizável de um agente de IA autônomo com arquitetura
+              baseada em ferramentas (tool-based). Ele encapsula a lógica de integração com a Claude API,
+              o processamento de filas de mensagens via BullMQ e os adaptadores de comunicação
+              (como WhatsApp via Baileys), permitindo que agentes especializados sejam construídos
+              sobre essa base sem reescrever a infraestrutura.
+            </p>
+            <p class="project-detail-desc">
+              O projeto surgiu da necessidade de criar automações inteligentes para o <a href="eisencare.html" style="color: var(--accent);">EisenCare</a>:
+              conciliação de agendamentos e atendimento via chat. O projeto evoluiu para um módulo independente
+              publicado como pacote NPM.
             </p>
 
-            <h3 class="project-detail-subtitle">Recursos</h3>
+            <h3 class="project-detail-subtitle">O que ele faz</h3>
             <ul class="project-detail-features">
-              <li>Arquitetura modular</li>
-              <li>Integração com APIs</li>
-              <li>Processamento de mensagens</li>
-              <li>Base para agentes inteligentes</li>
-              <li>Estrutura escalável</li>
+              <li>Arquitetura tool-based: o LLM decide quais ferramentas chamar com base no contexto da conversa</li>
+              <li>Integração com Claude API para raciocínio e geração de respostas</li>
+              <li>Fila de mensagens com BullMQ para processamento assíncrono e resiliente</li>
+              <li>Adaptador WhatsApp via Baileys para automação de conversas</li>
+              <li>Estrutura extensível: novos agentes herdam a base sem duplicar lógica</li>
             </ul>
           </div>
 
@@ -76,8 +84,10 @@
             <div class="stack-tags">
               <span class="tag">Node.js</span>
               <span class="tag">TypeScript</span>
-              <span class="tag">API</span>
-              <span class="tag">AI</span>
+              <span class="tag">Claude API</span>
+              <span class="tag">BullMQ</span>
+              <span class="tag">WhatsApp (Baileys)</span>
+              <span class="tag">NPM Package</span>
             </div>
 
             <div class="project-detail-actions">
@@ -130,7 +140,7 @@
   <!-- ===================== FOOTER ===================== -->
   <footer class="footer">
     <div class="container">
-      <p>&copy; <span id="year"></span> Bryan Rory Ferreira &#8212; Construído com HTML, CSS e JS puro.</p>
+      <p>&copy; <span id="year"></span> Bryan Rory Ferreira · Construído com HTML, CSS e JS puro.</p>
     </div>
   </footer>
 

@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Stefy-Agent — Agente de IA pessoal com arquitetura baseada em ferramentas, automação WhatsApp, lembretes, e-mail e gestão de tarefas." />
+  <meta name="description" content="Stefy-Agent: assistente pessoal inteligente via WhatsApp com automação de lembretes, e-mails e tarefas usando Claude API." />
   <meta name="author" content="Bryan Rory Ferreira" />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://bryanrory.github.io/projetos/stefy-agent.html" />
-  <meta property="og:title" content="Stefy-Agent — Bryan Rory Ferreira" />
-  <meta property="og:description" content="Agente de IA pessoal com automação WhatsApp, lembretes, e-mail e gestão de tarefas." />
+  <meta property="og:title" content="Stefy-Agent | Bryan Rory Ferreira" />
+  <meta property="og:description" content="Assistente pessoal inteligente via WhatsApp com automação de lembretes, e-mails e tarefas usando Claude API." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://bryanrory.github.io/projetos/stefy-agent.html" />
-  <title>Stefy-Agent — Bryan Rory Ferreira</title>
+  <title>Stefy-Agent | Bryan Rory Ferreira</title>
   <link rel="stylesheet" href="../style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
@@ -57,17 +57,25 @@
           <div class="project-detail-left">
             <h2 class="project-detail-subtitle">Sobre o projeto</h2>
             <p class="project-detail-desc">
-              Assistente pessoal inteligente com arquitetura baseada em ferramentas (tool-based),
-              integrando múltiplos canais de comunicação e funcionalidades de produtividade.
+              Stefy-Agent é um assistente pessoal inteligente que opera via WhatsApp. Construído sobre
+              o <a href="ai-agente-core.html" style="color: var(--accent);">ai-agente-core</a>,
+              ele usa a Claude API para entender intenções em linguagem natural e decidir autonomamente
+              quais ações tomar, sem menus ou comandos fixos.
+            </p>
+            <p class="project-detail-desc">
+              A motivação do projeto foi centralizar o gerenciamento de tarefas, e-mails e lembretes
+              em um único canal de comunicação familiar (WhatsApp), com uma IA que entende contexto
+              e executa ações reais em sistemas externos.
             </p>
 
-            <h3 class="project-detail-subtitle">Recursos</h3>
+            <h3 class="project-detail-subtitle">O que ele faz</h3>
             <ul class="project-detail-features">
-              <li>Automação via WhatsApp</li>
-              <li>Lembretes agendados</li>
-              <li>Gestão de e-mails</li>
-              <li>Gestão de tarefas</li>
-              <li>Arquitetura modular baseada em ferramentas</li>
+              <li>Recebe mensagens de linguagem natural pelo WhatsApp e decide autonomamente qual ação executar</li>
+              <li>Gerencia lembretes com agendamento via cron, avisando no horário certo sem intervenção manual</li>
+              <li>Integração com Gmail API para leitura, organização e resposta de e-mails por comando de voz</li>
+              <li>Gestão de tarefas persistida em PostgreSQL com rastreamento de status</li>
+              <li>Arquitetura tool-based: cada capacidade é uma ferramenta isolada que o LLM pode invocar</li>
+              <li>Servidor Fastify com logging estruturado via Pino para observabilidade em tempo real</li>
             </ul>
           </div>
 
@@ -76,8 +84,13 @@
             <div class="stack-tags">
               <span class="tag">TypeScript</span>
               <span class="tag">Node.js</span>
-              <span class="tag">WhatsApp API</span>
-              <span class="tag">AI</span>
+              <span class="tag">Fastify</span>
+              <span class="tag">Claude API</span>
+              <span class="tag">WhatsApp (Baileys)</span>
+              <span class="tag">Gmail API</span>
+              <span class="tag">PostgreSQL</span>
+              <span class="tag">node-cron</span>
+              <span class="tag">Pino</span>
             </div>
 
             <div class="project-detail-actions">
@@ -104,7 +117,7 @@
   <!-- ===================== FOOTER ===================== -->
   <footer class="footer">
     <div class="container">
-      <p>&copy; <span id="year"></span> Bryan Rory Ferreira &#8212; Construído com HTML, CSS e JS puro.</p>
+      <p>&copy; <span id="year"></span> Bryan Rory Ferreira · Construído com HTML, CSS e JS puro.</p>
     </div>
   </footer>
 

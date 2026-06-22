@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Sistema de Produção Industrial — Manutenção, correção de erros e melhoria de desempenho em sistema corporativo Delphi para o setor automotivo." />
+  <meta name="description" content="Sistema de Automação Industrial: otimização de performance e sustentação de sistema Delphi 7 no setor automotivo, com 100% de uptime em 4 anos." />
   <meta name="author" content="Bryan Rory Ferreira" />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://bryanrory.github.io/projetos/sistema-industrial.html" />
-  <meta property="og:title" content="Sistema de Produção Industrial — Bryan Rory Ferreira" />
-  <meta property="og:description" content="Manutenção e evolução de sistema corporativo Delphi em ambiente industrial do setor automotivo." />
+  <meta property="og:title" content="Sistema de Automação Industrial | Bryan Rory Ferreira" />
+  <meta property="og:description" content="Sustentação e otimização de sistema Delphi 7 em ambiente industrial automotivo com ganhos expressivos de performance." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://bryanrory.github.io/projetos/sistema-industrial.html" />
-  <title>Sistema de Produção Industrial — Bryan Rory Ferreira</title>
+  <title>Sistema de Automação Industrial | Bryan Rory Ferreira</title>
   <link rel="stylesheet" href="../style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
@@ -57,23 +57,36 @@
           <div class="project-detail-left">
             <h2 class="project-detail-subtitle">Sobre o projeto</h2>
             <p class="project-detail-desc">
-              Atuação em sistema corporativo utilizado em ambiente industrial,
-              realizando manutenção, correção de erros críticos, melhorias de
-              desempenho e ajustes em banco de dados. Experiência com análise de
-              falhas em produção, correção de Access Violation, otimização de
-              consultas SQL e suporte em sistema legado desenvolvido em Delphi.
+              Sistema de automação industrial desenvolvido em Delphi 7, operando <strong>24 horas por dia, 7 dias por semana</strong>
+              no chão de fábrica do setor automotivo. Quando o projeto chegou, o sistema apresentava lentidão severa
+              em diversas operações básicas. A causa raiz era um padrão arquitetural problemático consolidado
+              ao longo dos anos.
+            </p>
+            <p class="project-detail-desc">
+              O sistema realizava buscas repetidas ao banco de dados para recuperar a mesma informação toda vez que precisava,
+              em vez de armazená-la em objetos ou variáveis durante o ciclo de execução. Somado a isso,
+              as consultas eram feitas com <code>SELECT *</code> sem índices nas tabelas, sem <code>WITH(NOLOCK)</code>
+              e com múltiplos subselects aninhados, combinação que tornava operações simples
+              extraordinariamente lentas em ambiente de alta concorrência.
+            </p>
+            <p class="project-detail-desc">
+              Além da lentidão, frequentes <strong>Access Violations e travamentos</strong> exigiam
+              intervenções de emergência em <strong>fins de semana e madrugadas</strong> para manter
+              a produção funcionando. Hoje, após as otimizações, o sistema roda <strong>semanas ou meses
+              sem nenhuma intervenção humana</strong>. Quando há intervenção, é para entregar melhorias,
+              não para apagar incêndio.
             </p>
 
-            <h3 class="project-detail-subtitle">Atividades</h3>
+            <h3 class="project-detail-subtitle">O que foi feito</h3>
             <ul class="project-detail-features">
-              <li>Correção de Access Violation e bugs em produção</li>
-              <li>Análise de problemas de performance</li>
-              <li>Otimização de consultas SQL</li>
-              <li>Melhorias de desempenho e modernização</li>
-              <li>Integração com banco de dados</li>
-              <li>Suporte técnico e sustentação</li>
-              <li>Análise de logs e falhas</li>
-              <li>Ajustes em sistema legado</li>
+              <li><strong>Eliminação de buscas repetidas ao banco:</strong> dados passaram a ser carregados uma vez e armazenados em objetos/variáveis durante o ciclo de execução, reduzindo drasticamente o volume de I/O</li>
+              <li><strong>Criação de índices</strong> nas tabelas que operavam sem eles, impactando diretamente as queries mais executadas do sistema</li>
+              <li><strong>Adição de <code>WITH(NOLOCK)</code></strong> em consultas de leitura, eliminando contenção de locks em ambiente com múltiplos usuários simultâneos</li>
+              <li><strong>Substituição de <code>SELECT *</code></strong> por campos específicos, reduzindo transferência de dados desnecessária e aliviando a rede e o buffer do banco</li>
+              <li><strong>Refatoração de subselects aninhados</strong> por JOINs otimizados, tornando o plano de execução previsível e eficiente</li>
+              <li><strong>Correção de Access Violations e travamentos</strong> que forçavam reinicializações manuais em ambiente sem janela de manutenção</li>
+              <li>Ciclo de embalagem com <strong>ganho de 85% de eficiência</strong> após otimizações nas rotinas mais críticas</li>
+              <li>Processo de RGI reduzido para <strong>10% do tempo original</strong>: o que levava ~8 minutos passou a ser concluído em menos de 2 segundos (0,8s a 1,2s)</li>
             </ul>
           </div>
 
@@ -146,7 +159,7 @@
   <!-- ===================== FOOTER ===================== -->
   <footer class="footer">
     <div class="container">
-      <p>&copy; <span id="year"></span> Bryan Rory Ferreira &#8212; Construído com HTML, CSS e JS puro.</p>
+      <p>&copy; <span id="year"></span> Bryan Rory Ferreira · Construído com HTML, CSS e JS puro.</p>
     </div>
   </footer>
 

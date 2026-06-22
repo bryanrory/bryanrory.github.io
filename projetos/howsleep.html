@@ -3,16 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="M7 Marcenaria: site institucional para marcenaria, com apresentação de serviços, portfólio de trabalhos e contato." />
+  <meta name="description" content="HowSleep: app Android de monitoramento inteligente de sono com análise de hábitos e desafios personalizados via IA." />
   <meta name="author" content="Bryan Rory Ferreira" />
   <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://bryanrory.github.io/projetos/m7marcenaria.html" />
-  <meta property="og:title" content="M7 Marcenaria | Bryan Rory Ferreira" />
-  <meta property="og:description" content="Site institucional para marcenaria com apresentação de serviços e portfólio." />
+  <link rel="canonical" href="https://bryanrory.github.io/projetos/howsleep.html" />
+  <meta property="og:title" content="HowSleep | Bryan Rory Ferreira" />
+  <meta property="og:description" content="App Android de monitoramento inteligente de sono com análise de hábitos via IA." />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://bryanrory.github.io/projetos/m7marcenaria.html" />
-  <meta property="og:image" content="https://bryanrory.github.io/assets/projetos/m7marcenaria.png" />
-  <title>M7 Marcenaria | Bryan Rory Ferreira</title>
+  <meta property="og:url" content="https://bryanrory.github.io/projetos/howsleep.html" />
+  <title>HowSleep | Bryan Rory Ferreira</title>
   <link rel="stylesheet" href="../style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
@@ -44,48 +43,58 @@
   <!-- ===================== PROJECT DETAIL ===================== -->
   <header class="page-header">
     <div class="container">
-
-      <h1 class="fade-in">M7 <span class="highlight">Marcenaria</span></h1>
-      <p class="fade-in">Site institucional para marcenaria</p>
+      <h1 class="fade-in">How<span class="highlight">Sleep</span></h1>
+      <p class="fade-in">App Android de monitoramento inteligente de sono · Em desenvolvimento</p>
     </div>
   </header>
 
   <main>
-    <!-- ===================== TEXTO DO PROJETO ===================== -->
     <section class="section" style="padding-top: 1rem;">
       <div class="container">
         <div class="project-detail-grid reveal">
           <div class="project-detail-left">
             <h2 class="project-detail-subtitle">Sobre o projeto</h2>
             <p class="project-detail-desc">
-              Site institucional desenvolvido para a M7 Marcenaria, com foco em
-              apresentação dos serviços, portfólio de trabalhos realizados e
-              facilidade de contato com clientes.
+              HowSleep é um app Android que monitora a qualidade do sono de forma inteligente,
+              correlacionando hábitos pré-sono (cafeína, telas, estresse, alimentação, exercício)
+              com dados objetivos da Android Sleep API e avaliação subjetiva matinal.
+            </p>
+            <p class="project-detail-desc">
+              Com uma janela de análise de 30 noites, o app gera desafios personalizados via IA
+              e valida o sucesso matematicamente, sem depender de interação manual do usuário
+              para detectar o sono.
             </p>
 
-            <h3 class="project-detail-subtitle">Recursos</h3>
+            <h3 class="project-detail-subtitle">Funcionalidades</h3>
             <ul class="project-detail-features">
-              <li>Apresentação de serviços</li>
-              <li>Portfólio de trabalhos</li>
-              <li>Design responsivo</li>
-              <li>Integração com WhatsApp</li>
-              <li>Otimizado para SEO</li>
+              <li>Detecção automática de sono via Android Sleep API (sem interação)</li>
+              <li>Formulário de hábitos pré-sono (cafeína, telas, estresse, alimentação)</li>
+              <li>Avaliação pós-sono (humor, energia, qualidade percebida)</li>
+              <li>Análise diária por IA com janela de 30 noites</li>
+              <li>Desafios personalizados com prazo e validação automática</li>
+              <li>Modo offline com heurísticas locais como fallback</li>
+              <li>Dashboard de 7 noites e tendências de longo prazo</li>
+              <li>Modo dev com simulação de sono para testes</li>
             </ul>
           </div>
 
           <div class="project-detail-right">
             <h3 class="project-detail-subtitle">Stack</h3>
             <div class="stack-tags">
-              <span class="tag">HTML</span>
-              <span class="tag">CSS</span>
-              <span class="tag">JavaScript</span>
+              <span class="tag">Kotlin</span>
+              <span class="tag">Jetpack Compose</span>
+              <span class="tag">Material Design 3</span>
+              <span class="tag">MVVM + StateFlow</span>
+              <span class="tag">Room (SQLite)</span>
+              <span class="tag">Hilt (DI)</span>
+              <span class="tag">WorkManager</span>
+              <span class="tag">Android Sleep API</span>
+              <span class="tag">Claude API</span>
+              <span class="tag">DataStore</span>
+              <span class="tag">Retrofit</span>
             </div>
 
             <div class="project-detail-actions">
-              <a href="https://m7marcenaria.com" target="_blank" rel="noopener" class="btn btn-primary">
-                Visitar site
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15,3 21,3 21,9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-              </a>
               <a href="../index.html#projetos" class="btn btn-secondary">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12,19 5,12 12,5"/></svg>
                 Voltar
@@ -95,45 +104,7 @@
         </div>
       </div>
     </section>
-
-    <!-- ===================== GALERIA / CARROSSEL ===================== -->
-    <section class="section" style="padding-top: 0;">
-      <div class="container container-wide">
-        <div class="project-carousel reveal" id="project-carousel">
-          <div class="carousel-slides">
-            <div class="carousel-slide active" data-caption="Página principal">
-              <img src="../assets/projetos/m7marcenaria/m7marcenaria.png" alt="Página principal" />
-            </div>
-            <div class="carousel-slide" data-caption="Portfólio de trabalhos">
-              <img src="../assets/projetos/m7marcenaria/portfolio-trabalhos.jpg" alt="Portfólio de trabalhos" />
-            </div>
-            <div class="carousel-slide" data-caption="Avaliações de clientes">
-              <img src="../assets/projetos/m7marcenaria/avaliacoes-clientes.jpg" alt="Avaliações de clientes" />
-            </div>
-          </div>
-          <button class="carousel-btn carousel-prev" aria-label="Imagem anterior">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><polyline points="15,18 9,12 15,6"/></svg>
-          </button>
-          <button class="carousel-btn carousel-next" aria-label="Próxima imagem">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><polyline points="9,6 15,12 9,18"/></svg>
-          </button>
-          <div class="carousel-footer">
-            <div class="carousel-dots" id="carousel-dots"></div>
-            <p class="carousel-caption" id="carousel-caption">Página principal</p>
-          </div>
-        </div>
-      </div>
-    </section>
   </main>
-
-  <!-- ===================== LIGHTBOX ===================== -->
-  <div class="lightbox" id="lightbox" aria-hidden="true">
-    <button class="lightbox-close" id="lightbox-close" aria-label="Fechar">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="24" height="24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-    </button>
-    <img class="lightbox-img" id="lightbox-img" src="" alt="" />
-    <p class="lightbox-caption" id="lightbox-caption"></p>
-  </div>
 
   <!-- ===================== BOTÃO FLUTUANTE CONTATO ===================== -->
   <a href="https://wa.me/5547991633210" target="_blank" rel="noopener" class="fab-contact" aria-label="Falar no WhatsApp">

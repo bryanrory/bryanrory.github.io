@@ -3,17 +3,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Projetos de Bryan Rory Ferreira — Engenheiro de Software. Produtos SaaS, sistemas corporativos e mais." />
+  <meta name="description" content="Projetos de Bryan Rory Ferreira: produtos SaaS, sistemas corporativos, agentes de IA e mais." />
   <meta name="author" content="Bryan Rory Ferreira" />
   <meta name="keywords" content="projetos, portfólio, engenheiro de software, SaaS, EisenCare, .NET, Next.js, Bryan Rory Ferreira" />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://bryanrory.github.io/projetos.html" />
-  <meta property="og:title" content="Projetos — Bryan Rory Ferreira" />
-  <meta property="og:description" content="Projetos de Bryan Rory Ferreira — Engenheiro de Software especializado em .NET, Delphi e SaaS." />
+  <meta property="og:title" content="Projetos | Bryan Rory Ferreira" />
+  <meta property="og:description" content="Projetos de Bryan Rory Ferreira, Senior Systems Analyst & AI Engineer especializado em .NET, Delphi e SaaS." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://bryanrory.github.io/projetos.html" />
   <meta property="og:image" content="https://bryanrory.github.io/assets/foto.jpg" />
-  <title>Projetos — Bryan Rory Ferreira</title>
+  <title>Projetos | Bryan Rory Ferreira</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
@@ -73,7 +73,7 @@
             <div class="project-img-wrap">
               <img
                 src="assets/projetos/eisencare.png"
-                alt="EisenCare — Plataforma SaaS para barbearias"
+                alt="EisenCare, plataforma SaaS para barbearias"
                 class="project-img"
                 onerror="this.style.display='none'"
               />
@@ -82,9 +82,7 @@
             <div class="project-body">
               <h2 class="project-name">EisenCare</h2>
               <p class="project-desc">
-                Plataforma SaaS para gestão de barbearias, focada em agendamento online,
-                organização operacional e redução de faltas. Sistema completo com painel
-                administrativo, controle de agenda e notificações automáticas.
+                SaaS multi-tenant para gestão completa de barbearias: do agendamento online com detecção de conflitos ao POS com comissões por profissional, controle de estoque, dashboard analítico de KPIs e página pública com slug personalizado por estabelecimento. Construído do zero com Clean Architecture, rodando em produção com clientes reais.
               </p>
               <div class="stack-tags">
                 <span class="tag">.NET</span>
@@ -111,8 +109,7 @@
             <div class="project-body">
               <h2 class="project-name">Sistema de Produção Industrial</h2>
               <p class="project-desc">
-                Manutenção, correção de erros críticos e melhoria de desempenho em
-                sistema corporativo Delphi para cliente do setor automotivo.
+                Sistema de automação industrial em Delphi 7 operando 24/7 no setor automotivo. O sistema sofria com lentidão severa causada por buscas repetidas ao banco de dados, ausência de índices, SELECT * desnecessários e subselects aninhados. Após a reestruturação das queries e da forma de acesso a dados: ciclo de embalagem 85% mais rápido, RGI concluído em 10% do tempo original, e o sistema passou a rodar semanas ou meses sem qualquer intervenção humana.
               </p>
               <div class="stack-tags">
                 <span class="tag">Delphi</span>
@@ -133,7 +130,7 @@
             <div class="project-body">
               <h2 class="project-name">ai-agente-core</h2>
               <p class="project-desc">
-                Backend para agente de IA com arquitetura modular, integração com APIs e automações.
+                Núcleo reutilizável de agente de IA com arquitetura tool-based: integração com Claude API, fila de mensagens com BullMQ e adaptador WhatsApp. Base para construir automações inteligentes sem reescrever infraestrutura. Publicado como pacote NPM.
               </p>
               <div class="stack-tags">
                 <span class="tag">Node.js</span>
@@ -160,8 +157,7 @@
             <div class="project-body">
               <h2 class="project-name">Stefy-Agent</h2>
               <p class="project-desc">
-                Agente de IA pessoal com arquitetura baseada em ferramentas, automação WhatsApp,
-                lembretes, gestão de e-mails e tarefas.
+                Assistente pessoal inteligente que opera via WhatsApp. Entende linguagem natural e executa ações reais: agenda lembretes com cron, gerencia e-mails pelo Gmail API, rastreia tarefas em PostgreSQL e responde com contexto. Arquitetura tool-based sobre Claude API.
               </p>
               <div class="stack-tags">
                 <span class="tag">TypeScript</span>
@@ -178,11 +174,36 @@
             </div>
           </article>
 
-          <!-- PROJETO 5 — M7 Marcenaria (produto comercial) -->
+          <!-- PROJETO 5 — HowSleep (app Android) -->
+          <article class="project-card reveal">
+            <a href="projetos/howsleep.html" class="project-card-link" aria-label="Ver detalhes do HowSleep"></a>
+            <div class="project-img-wrap">
+              <img src="assets/projetos/howsleep.png" alt="HowSleep" class="project-img" onerror="this.style.display='none'" />
+              <div class="project-img-placeholder"><span>HS</span></div>
+            </div>
+            <div class="project-body">
+              <h2 class="project-name">HowSleep</h2>
+              <p class="project-desc">
+                App Android de monitoramento inteligente de sono que correlaciona hábitos pré-sono
+                (cafeína, telas, estresse) com qualidade objetiva via Android Sleep API e gera desafios
+                personalizados com IA. Análise com janela de 30 noites e validação matemática de metas.
+              </p>
+              <div class="stack-tags">
+                <span class="tag">Kotlin</span>
+                <span class="tag">Jetpack Compose</span>
+                <span class="tag">MVVM</span>
+                <span class="tag">Room</span>
+                <span class="tag">Claude API</span>
+                <span class="tag">WorkManager</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJETO 6 — M7 Marcenaria (produto comercial) -->
           <article class="project-card reveal">
             <a href="projetos/m7marcenaria.html" class="project-card-link" aria-label="Ver detalhes do M7 Marcenaria"></a>
             <div class="project-img-wrap">
-              <img src="assets/projetos/m7marcenaria/m7marcenaria.png" alt="M7 Marcenaria — Site institucional" class="project-img" onerror="this.style.display='none'" />
+              <img src="assets/projetos/m7marcenaria/m7marcenaria.png" alt="M7 Marcenaria, site institucional" class="project-img" onerror="this.style.display='none'" />
               <div class="project-img-placeholder"><span>M7</span></div>
             </div>
             <div class="project-body">
@@ -226,7 +247,7 @@
   <!-- ===================== FOOTER ===================== -->
   <footer class="footer">
     <div class="container">
-      <p>© <span id="year"></span> Bryan Rory Ferreira — Construído com HTML, CSS e JS puro.</p>
+      <p>© <span id="year"></span> Bryan Rory Ferreira · Construído com HTML, CSS e JS puro.</p>
     </div>
   </footer>
 
